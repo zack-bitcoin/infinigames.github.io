@@ -1,74 +1,279 @@
 <!DOCTYPE html>
 <html>
+<body>
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="InfiniAlpha : Demo website for Infini">
+<canvas id="myCanvas" width="800" height="600" style="border:1px solid #d3d3d3;">
+<img id="red" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA
+B3RJTUUH3ggEACMnQFHJYwAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAARH
+SURBVGje7Vpdb9QwEJzx3RuUaylC4v//NQQSoqiV4I3z8GA7WSf+ShoqhGqpTXtNHM/uzO56XQIQ
+/oPh8J+MVyD/2jgvP/j19raoGoEQGL/HG2huIOAdAQjX0yl+JFDhCwCoabLpSuQq1fQGxr8ru8HD
+gRDe/frRBlIbafEyq7eABIASRODkrxA5AbDLBBhWXwkx9hlCmQEDhXy2hk1AVp6wIIxH0kUAnPfV
+2VY3V4y2un+TRlT6VfDTZFqBmJjCtVX7RlqvM71TDaMOi10FYwUwkb/MF2+vInNPsTA7kdGy9E4a
+xVha76ZW2WGGF3Fe71xGDUIzM9hOvWpYO2nFXoeAaOHKlRiIOOX6/sl6jFGHGqsdGCk5pJsdeWSl
+B9JogrNvFlFqCrtqLx4Y0nIXkNv+cOCsyKgHI3LYnLGjhBsEtknsvYcthcSctzUQWRA4uFZ12wwW
+Iwjbbt7kDXaug+w7b3X9MnKIOaAPj4/Vx7/f3vZBaf070cyf+8Lv5ImoDRetf//02H0ugXy43Jqs
+wSKAvNbaQS1tEGIqAkdA2BHuZ3P+YmH6bI00eLwVRA6m/r65ejBVxKH7EQ4uZgjMU84DFgKL0eJG
+sS8IW4vtxF8b4vwCQpDWhWPXIyyBwHGU6uqFQXs2uY4Yz5XK5Bad/qIf+ppcJdWOR7ghUR032Pw4
+1Hj5FqItdr6sHkZxpdzFrO7uUEs9jbx0T89s1pZ1XT/8vhilGnbheP3m2hVqKX4f7w1xYNZEeWpM
+I1p4gSpT6uFyOQTEt8t7CISna4JRhxh1j3QpdQzXPF0AQQ5QvJ7ly0CKINb2ClXs/vHl8hEeAUgr
+R4yYzq0/8ANqnKd8eLcPzOebTxBc/Iole03Q7Gt0BcS7sBcfCrXxTw8328B8ffsxhPnIEedNG7Ta
+SjWYOFA0UjbdqJFqF7u/mztQwv3Peg327c09PAgvhh5ubBmJLkyoRpc01rKrBmC1+p2K374n8n5p
+BPTmLmuq2UTrTadQIE66hp8rSa7c+8JYg87Jj2WoWjcwcUBmg2QqhtR0tVoMLFC+haj0rmseOfag
+h6aCpg2xcW9BhZ8Z2quc/KRowLF3pNbsM5oPs5kU2ovrvTXtWUqExeQdF4s/gfKQiwB17VBLxiMO
+/vRsIMskpYwBRN4ipYl8YhB4yuCkVUuik5oFaivP7AIizL3e5dRy5oiNytbk6YI2zEPO+1kaXGpD
+xW7lUNTqdwkFWBCFrs6yhLAvpxZ64LzXaB1O2TLeOx5ErallY6xfYJ5fWC4BsPtxC5CdKlskrqcT
+fp/Px0atJQgtCzvmtZt3bsoZNKHY9pNLIKxH0xwHeIQdYMwomvbasLrKzlHyOcXZQHbByRsCoH3h
+l8UFqxYkOS9OYDyynmuqQK+2MawerEc8XcjsfujojZs6NqVWpzifWFmrjh43zJTNO//Oe/w+n4rU
+Il7/O+gVyCuQ1vgDxuYQAnhUdPgAAAAASUVORK5CYII=">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+<img id="yellow" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA
+B3RJTUUH3ggEACQKSs8D0QAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAADy
+SURBVGje7ZjLDoQgDEWLIW5M/P/vNHHjxtnMJJMGUPoQgrdLgnJPW1ogENFJA9hEgxhAerPIB45t
+MV9kXvfkuGYt/k+kFkBGAvHYh4jI60BypRcRAQhAANIfyFMVK3n61Yiz6tgSB8Tan5fEluYc21IU
+qI1e4Hf2lIh53au8rRF1BfzTweeElo8P3DkaBzQFQfkFyDefPS5EVtbVZq8p/+5VK7dQ7RzThihN
+pbsCLd+1okRQTsB/+Pm3V43OPCJ3vJTL15bFYNLugx4gRKdfaX57H+nR2QECEIC0O1chIk8Y+ghA
+APIiEM8SjHctgACkbB8Jj2RlSCs//AAAAABJRU5ErkJggg==">
+<img id="black" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA
+B3RJTUUH3ggDFSQjj0fCnwAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAA8
+SURBVFjD7dbBCQAgDAPA1v13risoRRC9excS+koEAAAn5dZ1VbXCcjVu3PkttR6oBYBhY9ioZdgA
+AB+b0joGE3ys5GAAAAAASUVORK5CYII=">
+<img id="blue" src="data:image/png;base64,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">
+<img id="green" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA
+B3RJTUUH3ggEACMNm+oAtQAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAABY
+SURBVGje7dq5DQAhDEXBz0L/HaOlACRijnmhI4/k0CXJnwv6ckkgu9WmST9k8+q0QEBAQEBAQEBA
+QEBAQEBAQEBAQEBAQEBAQEBAQEBAnoeU+A4CAVk1AFnyA2MPGVbvAAAAAElFTkSuQmCC">
+<img id="cursor" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA
+B3RJTUUH3ggEAC4ga5sijQAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAFO
+SURBVHja7Zs/C8IwEEd/lSBIwUFcnPz+H8dP4eIkSKGDcVCrYPrHxpKLfW/qIJbe83K5aywkeYEZ
+nCR5jxMLFEWhBWGwBUIQAr01JLSWwbS01W3XVWMI23jqsmqul5fVhw+WrEQyfrJkQRzvGfGtHDLE
+Wi9yry8+VNSpIZPWdE9jSB8CCPnLxjC2uZl1UY5sqskQlixACEIgSVFnKkyGIAQQghBACEyxy0qN
+1dFNzO7T/VMgWLIAIQgBW0X9eWoicLYoK3IZ87g+ESEZzLASZUjuWZFlJotjQIlaKI4BscsChCAE
+EIIQyFxIzB9WEGKEd4l1Wc1W6qD3IfW5HP6Nu9MrwMdteAKwvpjIrLqszE0j+mdZx+09yC3BHRWI
+h+A2MaN+CMPYS9pIOmh3ujb3+PHz9dH13F2jE5iQttGJG/phYNuLEEAIhIo6YbDDDVERYVULIAok
+AAAAAElFTkSuQmCC">
+<img id="left" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA
+B3RJTUUH3ggEEh80qL6GXAAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAACP
+SURBVGje7diBCcAgDETRpnT/la8LtFDoJYfyM4D4iMaYknTsEOexSQABAgQIECBAgAABAmS5uEzr
+/PmdFRmZgFTV+pBpRAskgbBDUggrJImwld83xBeca65mgUh63PTk8M92tNITS+tlT2Ls5TeFaXkQ
+E5i2FmUaQxvf0YqTESBAgAABAgQIECBAgAAJxg3ArxxqVCGRDAAAAABJRU5ErkJggg==">
+<img id="up" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA
+B3RJTUUH3ggEEiAQzGNIsQAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAACB
+SURBVGje7dlLCsQgEAXAfpL7X9msE2ZIFtF8qLdxJxZKN43pvdcX0uojAQEBAQEBAQEBAQF5XZYL
+9/o7oSWpgwEuj7+RJJv1lU9rf/iRmDYLMRrTZiJGYtpsxCjMcjXkV3U6UbX0ERAQEBCQWxP/IyAg
+ICAgICAgICAgICBVVbUCSUgQfHZBcfgAAAAASUVORK5CYII=">
 
-    <title>InfiniAlpha</title>
-  </head>
+<img id="right" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA
+B3RJTUUH3ggEEh4xwc9DkgAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAACN
+SURBVGje7dnRCcAwCIThnGT/ldMF+lDo2aPyO0DIhwrG6JyzJkStIQEECBAgQIAAAQIECBAgqdjG
+s948NUVGEhBJc3qkCxMprQ5MrEfcmGizOzE7fSlJy7EktEGeXOYO69p0RkvLua6tCYgYpGNxXhMQ
+n0M6vzAY4ztGcTICBAgQIECAAAECBAiQP8YFcvAcakKZeGgAAAAASUVORK5CYII=">
 
-  <body>
+<img id="down" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA
+B3RJTUUH3ggEEh8Wfd7HuAAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAACM
+SURBVGje7dkxCoAwDAXQRrz/leukg1AqmCiUl9FB/qPW0iR6722F2toiBQICAgICAgICAgIC8lft
+Se8ZXjMjok1uoWFFQEBAQEBWORCvw+/p8+xWbeqKPA1X0W9O/7RmIaua5iV7ZBS2svNfttnvoavH
+F6V/rTP8FzOYMOgBAQEBAQEBAQEBAQF5Vwc6gitGI/RSuQAAAABJRU5ErkJggg==">
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/InfiniGames">View on GitHub</a>
 
-          <h1 id="project_title">InfiniAlpha</h1>
-          <h2 id="project_tagline">Demo website for Infini</h2>
+Your browser does not support the HTML5 canvas tag.</canvas>
 
-        </header>
-    </div>
+<!--<script src="infini.js">
+</script>
+-->
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+<script>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+var cursor=document.getElementById('cursor')
+var tiles={
+    'yellow':document.getElementById('yellow'),
+    'blue':document.getElementById('blue'),
+    'red':document.getElementById('red'),
+    'black':document.getElementById('black'),
+    'green':document.getElementById('green')
+}
+var character={
+    'left':document.getElementById('left'),
+    'right':document.getElementById('right'),
+    'up':document.getElementById('up'),
+    'down':document.getElementById('down'),
+}
+var block_types={
+    0:'yellow',
+    1:'blue',
+    2:'red',
+    3:'black',
+    4:'green'
+}
+var Keys = {
+32:false,
+37:false,
+38:false,
+39:false,
+40:false,
+90:false
+}
+//function clone(o){JSON.parse(JSON.stringify(o));}
+var Keys_responded = {
+32:false,
+37:false,
+38:false,
+39:false,
+40:false,
+90:false
+}
+function handle_key(num, response){
+    //so each time you press the button only gets handled once.
+    if(Keys[num]){
+	if(!(Keys_responded[num])){
+	    Keys_responded[num]=true;
+	    response();
+	}
+    }else{
+	Keys_responded[num]=false;
+    }
+}
+var size=20;
+function spacebar(board){
+    handle_key(32, function(){
+    });
+}
+function right_arrow(board){
+    handle_key(39, function(){
+	board.direction="right";
+	if (board.p[0]<size-1){
+	    board.p[0]+=1;
+	}
+    });
+}
+function up_arrow(board){
+    handle_key(38, function(){
+	board.direction="up";
+	if(board.p[1]>0){
+	    board.p[1]-=1;
+	}
+    });
+}
+function left_arrow(board){
+    handle_key(37, function(){
+	board.direction="left";
+	if(board.p[0]>0){
+	    board.p[0]-=1;
+	}
+    });
+}
+function down_arrow(board){
+    handle_key(40, function(){
+	board.direction="down";
+	if(board.p[1]<size-1){
+	    board.p[1]+=1;
+	}
+    });
+}
+var movement=[spacebar, right_arrow, up_arrow, left_arrow, down_arrow]
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+document.addEventListener('keyup', function(event) {Keys[event.keyCode]=false;}, false)
+document.addEventListener('keydown', function(event) {
+//console.log('pressed key: ' +event.keyCode);
+Keys[event.keyCode]=true;}, false)
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+DB={p:[0,0],
+    img:tiles['red'],
+    direction:"right"}
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+function draw(ctx, o){
+    //console.log('o: ' +o)
+    return ctx.drawImage(o.img, 70*o.p[0], 70*o.p[1]);}
+function draw_background(ctx, DB){
+    x_push=0;
+    y_push=0;
+    if(DB.p[0]-5<0){x_push=5-DB.p[0];}
+    if(DB.p[1]-5<0){y_push=5-DB.p[1];}
+    if(DB.p[0]+5>size){x_push=size-5-DB.p[0];}
+    if(DB.p[1]+5>size){y_push=size-5-DB.p[1];}
+    for(i=0;i<10;i++){
+	for(j=0;j<10;j++){
+	    x=DB.p[0]-5+i+x_push;
+	    y=DB.p[1]-5+j+y_push;
+	    if(x>=0 && y>=0 && x<=20 && y<=20){
+		if(x%4==0 || y%4==0){
+		    draw(ctx, {p:[i, j], img:tiles['blue']});
+		}else{
+		    draw(ctx, {p:[i, j], img:tiles['green']});
+		}
+	    }
+	    if(x==DB.p[0] && y==DB.p[1]){
+		foo=character[DB.direction];
+		console.log(foo)
+		draw(ctx, {p:[i, j], img:foo});
+	    }
+	}
+    }
+}
+function doit(DB){
+    setInterval(function(){
+	ctx.clearRect(0,0,c.width,c.height);
+	draw_background(ctx, DB);
+	movement.map(function(f){f(DB);});
+    },1000/15);
+}
+doit(DB);
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+</script>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+</body>
 </html>
